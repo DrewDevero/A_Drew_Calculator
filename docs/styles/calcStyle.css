@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+body {
+    background: white;
+}
+header {
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+}
+header > h1 {
+    color: rgb(100, 93, 93);
+    text-transform: capitalize;
+    background: rgba(0, 128, 0, 0.35);
+    padding: 1.25rem;
+    border-radius: 50%;
+}
+section {
+    display: flex;
+    justify-content: center;
+}
+#input{
+    grid-area: input;
+    color: black;
+    font-size: 2rem;
+    padding-left: 0.5rem;
+    transition: 0.1s ease-in-out;
+}
+.num1 {
+    grid-area: num1;
+    font-size: 1.5rem;
+}
+.num2 {
+    grid-area: num2;
+    font-size: 1.5rem;
+}
+.num3 {
+    grid-area: num3;
+    font-size: 1.5rem;
+}
+.num4 {
+    grid-area: num4;
+    font-size: 1.5rem;
+}
+.num5 {
+    grid-area: num5;
+    font-size: 1.5rem;
+}
+.num6 {
+    grid-area: num6;
+    font-size: 1.5rem;
+}
+.num7 {
+    grid-area: num7;
+    font-size: 1.5rem;
+}
+.num8 {
+    grid-area: num8;
+    font-size: 1.5rem;
+}
+.num9 {
+    grid-area: num9;
+    font-size: 1.5rem;
+}
+.plus {
+    grid-area: plus;
+    text-transform: 1.5rem;
+}
+.minus {
+    grid-area: minus;
+    text-transform: 1.5rem;
+}
+.multiply {
+    grid-area: multiply;
+    text-transform: 1.5rem;
+}
+.divide {
+    grid-area: divide;
+    text-transform: 1.5rem;
+}
+#average {
+    grid-area: average;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+}
+#equals {
+    grid-area: equals;
+    font-size: 1.5rem;
+}
+#clearButton {
+    color: rgb(100, 93, 93);
+    font-size: 1.5rem;
+    font-weight: bold;
+    grid-area: clearButton;
+    background: rgba(0, 128, 0, 0.35);
+    text-align: center;
+}
+#clearButton > div {
+    padding: 0.25rem;
+}
+#calculatorSpacing {
+    height: 55vh;
+    width: 30vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 0.5fr 0.5fr;
+    grid-template-rows: 1fr 0.5fr 0.5fr 0.5fr 1fr;
+    grid-template-areas:
+        "input input input clearButton plus"
+        "num1 num2 num3 clearButton minus"
+        "num4 num5 num6 clearButton multiply"
+        "num7 num8 num9 clearButton divide"
+        "average average average equals equals";
+    border: solid 0.15rem rgba(43, 61, 226, 0.35);
+}
+#input:focus {
+    background: lightblue;
+}
+#input:hover {
+    background: lightblue;
+}
