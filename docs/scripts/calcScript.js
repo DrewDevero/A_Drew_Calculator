@@ -16,7 +16,7 @@ function buttonDefault(button) {
 function buttonPressed(pressed) {
     pressed.addEventListener("click", () => {
         INPUT.value += pressed.innerHTML;
-        arrayOfNums.push(parseInt(pressed.innerHTML))
+            pressed.innerHTML !== "0" ? arrayOfNums.push(parseInt(pressed.innerHTML)) : "";
         }
     )
 }

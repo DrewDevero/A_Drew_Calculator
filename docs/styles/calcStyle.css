@@ -66,6 +66,10 @@ section {
     grid-area: num9;
     font-size: 1.5rem;
 }
+.num0 {
+    grid-area: num0;
+    font-size: 1.5rem;
+}
 .plus {
     grid-area: plus;
     text-transform: 1.5rem;
@@ -108,12 +112,13 @@ section {
     width: 30vw;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 0.5fr 0.5fr;
-    grid-template-rows: 1fr 0.5fr 0.5fr 0.5fr 1fr;
+    grid-template-rows: 1fr 0.5fr 0.5fr 0.5fr 0.25fr 1fr;
     grid-template-areas:
         "input input input clearButton plus"
         "num1 num2 num3 clearButton minus"
         "num4 num5 num6 clearButton multiply"
         "num7 num8 num9 clearButton divide"
+        "num0 num0 num0 equals equals"
         "average average average equals equals";
     border: solid 0.15rem rgba(43, 61, 226, 0.35);
 }
