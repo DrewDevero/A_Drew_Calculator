@@ -4,6 +4,8 @@ const AVERAGE = document.getElementById("average");
 const EQUALS = document.getElementById("equals");
 const INPUT = document.getElementById("input");
 const CLEAR = document.getElementById("clearButton");
+let placeholderInt;
+setInterval(() => {placeholderInt = parseInt(INPUT.placeholder)}, 100);
 let numToPush = "";
 let arrayOfNums = [];
 
@@ -20,12 +22,12 @@ function numberPressed(pressed) {
     )
 }
 function operatorPressed(pressed) {
-    const PLACEHOLDER_INT = parseInt(INPUT.placeholder);
         if (pressed === OPERATORS[0]) {
             pressed.addEventListener("click", () => {
-                if(typeof PLACEHOLDER_INT === "number" && PLACEHOLDER_INT !== 0) {
+                if(typeof placeholderInt === "number" && placeholderInt !== 0) {
+                    console.log(INPUT.placeholder);
                     INPUT.value = INPUT.placeholder + pressed.innerHTML;
-                    arrayOfNums.push(PLACEHOLDER_INT);
+                    arrayOfNums.push(placeholderInt);
                     INPUT.placeholder = "0";
                 } else {
                     INPUT.value += pressed.innerHTML;
@@ -34,7 +36,7 @@ function operatorPressed(pressed) {
             })
         } else {
             pressed.addEventListener("click", () => {
-                if(typeof PLACEHOLDER_INT === "number" && PLACEHOLDER_INT !== 0) {
+                if(typeof placeholderInt === "number" && placeholderInt !== 0) {
                     INPUT.value = INPUT.placeholder + pressed.innerHTML;
                     INPUT.placeholder = "0";
                 } else {
@@ -44,16 +46,23 @@ function operatorPressed(pressed) {
         }     
 }
 function equals(evaluate) {
-    evaluate.addEventListener("click", () =>
-        INPUT.value = eval(INPUT.value)
-    )
+    evaluate.addEventListener("click", () => {
+        INPUT.value = eval(INPUT.value);
+        INPUT.placeholder = "0"
+    })
 }
 function average(evaluate) {
     evaluate.addEventListener("click", () => {
-         numToPush === "" ? (INPUT.value = "", INPUT.placeholder = arrayOfNums.reduce((a,b) => a + b) / arrayOfNums.length, arrayOfNums = []) : (arrayOfNums.push(parseInt(numToPush)), INPUT.value = "", INPUT.placeholder = arrayOfNums.reduce((a,b) => a + b) / arrayOfNums.length, numToPush = "", arrayOfNums = []);
-        return numToPush, arrayOfNums;
+        if (placeholderInt === 0) {
+            numToPush === "" ? (INPUT.value = "", INPUT.placeholder = arrayOfNums.reduce((a,b) => a + b) / arrayOfNums.length, arrayOfNums = []) : (arrayOfNums.push(parseInt(numToPush)), INPUT.value = "", INPUT.placeholder = arrayOfNums.reduce((a,b) => a + b) / arrayOfNums.length, numToPush = "", arrayOfNums = []);
+            console.log(placeholderInt);
+            return numToPush, arrayOfNums;
+        } else if (typeof placeholderInt === "number" && placeholderInt !== 0) {
+            INPUT.value = INPUT.placeholder;
+            
+            console.log(INPUT.placeholder)
         }
-    )
+    })
 }
 function clear(clearPressed) {
     clearPressed.addEventListener("click", () => {
