@@ -50,7 +50,7 @@ function equals(evaluate) {
          if (typeof placeholderInt === "number" && placeholderInt !== 0) {
             INPUT.value = INPUT.placeholder;
          } else {
-            eval(INPUT.value) === undefined || typeof parseInt(INPUT.value) !== "number" ? (INPUT.value = "undefined", setTimeout(() => {INPUT.value = "0"; numToPush += "0"}, 1000)) : INPUT.value = eval(INPUT.value)
+            eval(INPUT.value) === undefined ? (INPUT.value = "undefined", console.log(parseInt(INPUT.value)), setTimeout(() => {INPUT.value = "0"; numToPush += "0"}, 1000)) : INPUT.value = eval(INPUT.value)
          }
     })
 }
