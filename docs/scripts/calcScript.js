@@ -47,20 +47,20 @@ function operatorPressed(pressed) {
 }
 function equals(evaluate) {
     evaluate.addEventListener("click", () => {
-        INPUT.value = eval(INPUT.value);
-        INPUT.placeholder = "0"
+         if (typeof placeholderInt === "number" && placeholderInt !== 0) {
+            INPUT.value = INPUT.placeholder;
+         } else {
+            eval(INPUT.value) === undefined ? (INPUT.value = "undefined", setTimeout(() => {INPUT.value = "0"; numToPush += "0"}, 1000)) : INPUT.value = eval(INPUT.value)
+         }
     })
 }
 function average(evaluate) {
     evaluate.addEventListener("click", () => {
         if (placeholderInt === 0) {
             numToPush === "" ? (INPUT.value = "", INPUT.placeholder = arrayOfNums.reduce((a,b) => a + b) / arrayOfNums.length, arrayOfNums = []) : (arrayOfNums.push(parseInt(numToPush)), INPUT.value = "", INPUT.placeholder = arrayOfNums.reduce((a,b) => a + b) / arrayOfNums.length, numToPush = "", arrayOfNums = []);
-            console.log(placeholderInt);
             return numToPush, arrayOfNums;
         } else if (typeof placeholderInt === "number" && placeholderInt !== 0) {
             INPUT.value = INPUT.placeholder;
-            
-            console.log(INPUT.placeholder)
         }
     })
 }
