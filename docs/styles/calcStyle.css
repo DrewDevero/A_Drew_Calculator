@@ -18,6 +18,7 @@ header > h1 {
     background: rgba(0, 128, 0, 0.35);
     padding: 1.25rem;
     border-radius: 50%;
+    box-shadow: 0.25rem 0.25rem rgba(43, 61, 226, 0.35);
 }
 section {
     display: flex;
