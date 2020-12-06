@@ -125,7 +125,7 @@ section {
 }
 @media screen and (max-width: 50rem) {
     #calculatorSpacing {
-        height: 70%;
+        height: 30rem;
         width: 70%;
     }
 }
