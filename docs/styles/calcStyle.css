@@ -108,8 +108,8 @@ section {
     padding: 0.25rem;
 }
 #calculatorSpacing {
-    height: 55vh;
-    width: 30vw;
+    height: 22rem;
+    width: 23rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 0.5fr 0.5fr;
     grid-template-rows: 1fr 0.5fr 0.5fr 0.5fr 0.25fr 1fr;
@@ -121,6 +121,13 @@ section {
         "num0 num0 num0 equals equals"
         "average average average equals equals";
     border: solid 0.15rem rgba(43, 61, 226, 0.35);
+    transition: all 1s linear;
+}
+@media screen and (max-width: 50rem) {
+    #calculatorSpacing {
+        height: 50%;
+        width: 50%;
+    }
 }
 #input:focus {
     background: lightblue;
