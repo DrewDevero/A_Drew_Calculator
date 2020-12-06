@@ -124,6 +124,9 @@ section {
     transition: all 0.1s ease-in-out;
 }
 @media screen and (max-width: 50rem) {
+    header > h1 {
+        padding: 1rem;
+    }
     #calculatorSpacing {
         height: 50%;
         width: 70%;
