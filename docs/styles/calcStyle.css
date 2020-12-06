@@ -126,7 +126,7 @@ section {
 @media screen and (max-width: 50rem) {
     #calculatorSpacing {
         height: 50%;
-        width: 50%;
+        width: 70%;
     }
 }
 #input:focus {
