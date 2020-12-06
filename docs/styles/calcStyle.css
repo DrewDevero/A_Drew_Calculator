@@ -121,11 +121,11 @@ section {
         "num0 num0 num0 equals equals"
         "average average average equals equals";
     border: solid 0.15rem rgba(43, 61, 226, 0.35);
-    transition: all 1s linear;
+    transition: all 0.1s ease-in-out;
 }
 @media screen and (max-width: 50rem) {
     #calculatorSpacing {
-        height: 50%;
+        height: 70%;
         width: 70%;
     }
 }
