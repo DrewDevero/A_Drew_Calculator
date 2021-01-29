@@ -1,2 +1,2 @@
 # A_Drew_Calculator
-I created a fully functional calculator. Try it out!
+I created a functional calculator. Try it out!
