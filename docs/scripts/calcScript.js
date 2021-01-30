@@ -4,6 +4,7 @@ const AVERAGE = document.getElementById("average");
 const EQUALS = document.getElementById("equals");
 const INPUT = document.getElementById("input");
 const CLEAR = document.getElementById("clearButton");
+const DECIMAL = document.getElementsByClassName("decimal")[0];
 let placeholderInt;
 setInterval(() => {placeholderInt = parseInt(INPUT.placeholder)}, 100);
 let numToPush = "";
@@ -21,6 +22,14 @@ function numberPressed(pressed) {
         }
     )
 }
+
+(function decimal() {
+    buttonDefault(DECIMAL);
+    DECIMAL.addEventListener("click", () => 
+        INPUT.value += DECIMAL.innerHTML
+    )
+})();
+
 function operatorPressed(pressed) {
         if (pressed === OPERATORS[0]) {
             pressed.addEventListener("click", () => {

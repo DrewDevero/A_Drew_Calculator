@@ -71,21 +71,26 @@ section {
     grid-area: num0;
     font-size: 1.5rem;
 }
+.decimal {
+    grid-area: decimal;
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+}
 .plus {
     grid-area: plus;
-    text-transform: 1.5rem;
+    font-size: 1.5rem;
 }
 .minus {
     grid-area: minus;
-    text-transform: 1.5rem;
+    font-size: 1.5rem;
 }
 .multiply {
     grid-area: multiply;
-    text-transform: 1.5rem;
+    font-size: 1.5rem;
 }
 .divide {
     grid-area: divide;
-    text-transform: 1.5rem;
+    font-size: 1.5rem;
 }
 #average {
     grid-area: average;
@@ -113,8 +118,9 @@ section {
     width: 23rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 0.5fr 0.5fr;
-    grid-template-rows: 1fr 0.5fr 0.5fr 0.5fr 0.25fr 1fr;
+    grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.25fr 1fr;
     grid-template-areas:
+        "input input input clearButton decimal"
         "input input input clearButton plus"
         "num1 num2 num3 clearButton minus"
         "num4 num5 num6 clearButton multiply"
